@@ -2,10 +2,8 @@
 #include <stdio.h>
 /**
  *main - print the string in the out function
- *
- * Description - the main function
- * This program print 'Programming is like building a multilingual puzzle'
- * Return:0
+ * 
+ * Return: 0 after printing the function.
  */
 
 int main(void)
