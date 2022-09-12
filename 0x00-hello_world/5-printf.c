@@ -1,12 +1,11 @@
-#!/bin/bash
 #include<stdio.h>
 /**
- *Main - print the script in the put function
+ * main - print a text
  *
+ * Reurn: Always 0 (Success)
  */
-
 int main(void)
 {
-	printf("With proper grammar, but the outcome is a piece of art,\n");
-	return (0);
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+	return(0);
 }
