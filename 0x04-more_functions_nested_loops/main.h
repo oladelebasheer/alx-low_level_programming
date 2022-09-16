@@ -16,7 +16,7 @@ void print_squre(int size);
 void print_triangle(int size);
 void print_number(int n);
 int _putchar(char);
-int _issupper(int);
+int _isupper(int);
 int mul(int, int);
 
 #endif /*MAIN_H*/
