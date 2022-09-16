@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code.
+ * _isupper - function to check if
  *
  * Return: Always 0.
  */
