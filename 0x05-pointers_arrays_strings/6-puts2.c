@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * puts2 - pring all string character
+ * puts2 - pring every other character
  * @str - string
- * return. return all string
+ * return. return nothing
  */
 
 void puts2(char *str)
