@@ -1,11 +1,11 @@
- #include <stdio.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * puts2 - pring every other character
- * @str - string
- * Description: 'the program's description'
- * return. return nothing
+ * puts2 - prints every other character
+ * @str: string
+ *
+ * return: nothing
  */
 
 void puts2(char *str)
