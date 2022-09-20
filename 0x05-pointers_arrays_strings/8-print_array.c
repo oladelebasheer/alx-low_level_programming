@@ -1,23 +1,23 @@
-#include <stdio.h>                           
-#include "main.h"                            
-                                             
-/**                                          
- * puts_half - print galf of a string        
- * @a- array                                 
- * @n- number of elements                    
- * return - return nothing                   
- */                                          
-                                             
-void print_array(int *a, int n)              {                                            
-        int inc;                             
-                                             
-        for (inc = 0; inc < n; inc++)        
-        {                                    
-                if (inc != n - 1)            
-                        printf("%d", a[inc]);
-                else                         
-                        printf("%d", a[inc]);
-        }                                    
-        putchar(10);                         
-}                                            
-~                                            
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * puts_half - print n elements of arry
+ * @a- array
+ * @n- number of elements
+ * return - return nothing
+ */
+
+void print_array(int *a, int n)
+{
+	int inc;
+
+	for (inc = 0; inc < n; inc++)
+	{
+		if (inc != n - 1)
+			printf("%d", a[inc]);
+		else
+			printf("%d", a[inc]);
+	}
+	putchar(10);
+}
