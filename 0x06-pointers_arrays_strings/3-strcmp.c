@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- * _strcmp - function that compare two strings and 
+ * _strcmp - function that compare two strings and
  * @s1: first string
  * @s2: second string
  *
- * return: 
- * 	return zero if s1 ==s2
- * 	return negative number if s1 < s2
- * 	retun positive if s1 > s2
+ * Return: return zero if s1 ==s2,
+ * return negative number if s1 < s2,
+ * retun positive if s1 > s2
  */
 
 int _strcmp(char *s1, char *s2)
@@ -34,7 +33,7 @@ int _strcmp(char *s1, char *s2)
 			diff = s1[i] - s2[i];
 			break
 		}
-		else 
+		else
 			i++
 	}
 	return (diff);
