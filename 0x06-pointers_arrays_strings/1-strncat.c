@@ -8,7 +8,7 @@
  * Return: return new concatenated string.
  */
 
-char *_strcat(char *dest, char *src, int n)
+char char *_strncat(char *dest, char *src, int n);
 {
 	int index = 0, dest_len = 0;
 
