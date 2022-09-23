@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * Strcat - concatenates two string using at most
- *
- * @dest: the pointer to be appended upon
- * @src: the source string to be appended to @dest.
- * Return: a pointer to the destnation string @dest.
+ * _strncat - concatenate two strings but add input
+ * @dest:string to be appended upon
+ * @src: string to be completed at end of dest.
+ * @n: integer paraeter to compare index to
+ * Return: return new concatenated string.
  */
 char *_strcat(char *dest, char *src, int n)
 {
