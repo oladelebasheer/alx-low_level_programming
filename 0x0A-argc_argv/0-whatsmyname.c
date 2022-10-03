@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - Write a program that its name,followed by a new line.
  * if we rename the program, it will print the name, without having to
@@ -14,8 +14,8 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc >= 1)
-		printf("%s\n", argv[0]);
-
+	(void) argc;
+	printf("%s\n", argv[0]);
+	
 	return (0);
 }
