@@ -12,10 +12,9 @@
  * return: This return to 0.
  */
 
-int main(int argc, char *argv[])
+int main(int argc _attribute_((unused)), char *argv[])
 {
-
-	printf("%d\n", argc);
+	printf("%s\n", argv[0]);
 	
 	return (0);
 }
