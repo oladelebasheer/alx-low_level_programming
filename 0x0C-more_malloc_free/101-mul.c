@@ -1,42 +1,35 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 /**
-  * main - Multiplies two positive number
-  * @argc: num arguments
-  * @argv: arg
-  * Return: 0
-  */
+ * main - multiplies two positive numbers
+ * @argc: n arguments
+ * @argv: args
+ * Return: int
+ */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i, j, len1 = 0, len2 = 0;
-	int *res;
-
-	if (argc != 3)
+	unsigned long mul;
+	int i, j;
+	if (argc !=3)
 	{
-		err(98);
+		printf("Error\n");
+		exit(98);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(is_valid(argv[i])))
-			err(98);
-		if (i == 1)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			for (j = 0; argv[i][j]; j++)
-				len1++;
-		}
-		if (i == 2)
-		{
-			for (j = 0; argv[i][j]; j++)
-				len2++;
+			if (argv[i][j] > 57 || argv[i][j] < 48)
+			{
+				printf("Error\n");
+				exit(98);
+			}
 		}
 	}
-	res = int_calloc(len1 + len2, sizeof(int));
-	if (res == NULL)
-		err(98);
-	mult(res, argv[1], argv[2], len1, len2);
-	free(res);
+	mul = atol(argv[1]) *atol(argv[2]);
+	printf("%lu\n", mul);
 	return (0);
 }
+
