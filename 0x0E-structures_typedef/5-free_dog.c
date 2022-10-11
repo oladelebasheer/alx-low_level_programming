@@ -2,9 +2,9 @@
 #include "dog.h"
 
 /**
- * free_dog - ...
- * @d: ... 
- * Return: ...
+ * free_dog - free dogs
+ * @d: the dog to be freed.
+ * Return: nothing
  */
 void free_dog(dog_t *d)
 {
