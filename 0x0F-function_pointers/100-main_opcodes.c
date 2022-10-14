@@ -12,29 +12,28 @@
 
 int main(int argc, char *argv[])
 {
-	ud_t ud_obj;
-	int val = 0, i = 0;
+	int count, bytes;
 
-	if (argc == 2)
+	if (argc != 2)
 	{
-		val = atoi(argv[1]);
-
-		if (val < 0)
-		{
-			printf("Error\n");
-			exit(2);
-		}
-
-		ud_unit(&ud_obj);
-		ud_set_input_buffer(&ud_obj, argv[1], val);
-		ud_set_mode(&ud_obj, 64);
-		ud_set_syntax(&ud_obj, UD_SYN_INTEL);
-
-		while (ud_disassemble(&ud_obj))
-		{
-			printf("\t%s\n", ud_insn_hex(&ud_obj));
-		}
+		pritf("Error\n");
+		exit(1);
 	}
 
+	bytes = atoi(argv[]);
+	if (bytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	for (count = 0; count < bytes; count++)
+	{
+		printf("%02hhx", *((char *)main + count));
+		if (count < bytes - 1)
+			printf(" ");
+		else
+			printf(""\n);
+	}
 	return (0);
 }
