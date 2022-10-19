@@ -1,20 +1,15 @@
-#include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - program that multiplies two numbers
+ * main - Prints the minimum number of coins
+ * @argc: The number of arguments supplied to the program
+ * @argv: An array of pointers to the arguments
  *
- * @argc: argument count for main
- * @argv: vector to the arguments
- *
- * Return: void
+ * Return: Always tru
  */
-
 int main(int argc, char *argv[])
 {
-	int i;
-	int num;
-	int cents = 0;
-	int coin[5] = {25, 10, 5, 2, 1};
+	int cents, coins = 0;
 
 	if (argc != 2)
 	{
@@ -22,16 +17,37 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num = atoi(argv[1]);
+	cents = atoi(argv[1]);
 
-		for (i = 0; i < 5; i++)
+	while (cents > 0)
+	{
+		coins++;
+
+		if ((cents - 25) >= 0)
 		{
-			if (num / coin[i] > 0)
-			{
-				cents += num / coin[i];
-				num = num % coin[i];
-			}
+			cents -= 25;
+			continue;
 		}
-		printf("%d\n", cents);
+
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
+	}
+
+	printf("%d\n", coins);
 	return (0);
 }
