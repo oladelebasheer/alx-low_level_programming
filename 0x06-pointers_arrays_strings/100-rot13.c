@@ -1,28 +1,25 @@
 #include "main.h"
 
 /**
- * rot13 - encode a string using rot13
- * @str: the string target
- *
- * return: return the string result
- */
-
-char *rot13(char *str)
+  * print_number - Prints any integer with putchar
+  * @n: Number to prints
+  *
+  * Return: Nothing
+  */
+void print_number(int n)
 {
-	int idx1, idx2;
-	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S'};
+	unsigned int x;
 
-	while (str[++idx1])
+	if (n < 0)
 	{
-		for (idx2 = 0; idx2 < 52; idx2++)
-		{
-			if (strstr[idx1] == alphabet[idx2])
-			{
-				str[idx1] = rot13key[idx2];
-				break
-			}
-		}
+		_putchar('-');
+		n *= -1;
 	}
-	return (str);
+
+	x = n;
+
+	if (x / 10)
+		print_number(x / 10);
+
+	_putchar(x % 10 + '0');
 }
