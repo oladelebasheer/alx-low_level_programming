@@ -1,25 +1,30 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strncat - a function that concatenates two strings
- * @dest:copy to
- * @src: copy from
- * @n: n
- * Return: Always 0 (Success)
+ * _strncat - Concatenates two strings
+ * @dest: The destination value
+ * @src: The source value
+ * @n: The limit of the concatenation
+ * Return: A pointer to the resulting string dest
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, co;
-
-	for (i = 0; dest[i] != '\0'; i++)
+	int dlen = 0, j = 0;
+	
+	while (dest[dlen])
 	{
+		dlen++;
 	}
-
-	for (co = 0; co < n; co++)
+	
+	while (j < n && src[j])
 	{
-		dest[i + co] = src[co];
-		if (src[co] == '\0')
-			co = n;
+		dest[dlen] = src[j];
+		dlen++;
+		j++;
 	}
+	
+	dest[dlen + n + 1] = '\0';
+	
 	return (dest);
 }
