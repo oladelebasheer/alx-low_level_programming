@@ -1,30 +1,25 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _strncat - Concatenates two strings
- * @dest: The destination value
- * @src: The source value
- * @n: The limit of the concatenation
- * Return: A pointer to the resulting string dest
+ * _strcmp - compare 2 string
+ * @s1:string
+ * @s2:strmp
+ * Return:int
  */
-
-char *_strncat(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int dlen = 0, j = 0;
-
-	while (dest[dlen])
+	while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
 	{
-		dlen++;
+		s1++;
+		s2++;
 	}
 
-	while (j < n && src[j])
+	if (*s1 == *s2)
 	{
-		dest[dlen] = src[j];
-		dlen++;
-		j++;
+		return (0);
 	}
 
-	dest[dlen + n + 1] = '\0';
-
-	return (dest);
+	else
+	{
+		return (*s1 - *s2);
+	}
 }
